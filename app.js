@@ -1,5 +1,15 @@
 // google geocode key AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk
 
+// mapboxgl.accessToken = 'pk.eyJ1Ijoic3VidGxlcmlkZXNub3ciLCJhIjoiY2l3a2F2cnVuMDAzNDJvcDI2Nnc3d3R3MiJ9.2GBe5fY1JXBCg48VcATbZw';
+// var map = new mapboxgl.Map({
+//     container: 'map', // container id
+//     style: 'mapbox://styles/subtleridesnow/ciwn3f9w400452ppll27n9i56', //hosted style id
+//     center: [-98, 39], // starting position
+//     zoom: 3, // starting zoom
+//     "pitch": 50 //pitch
+// });
+
+
 $(document).ready(function() {
 
   $('form').on('submit', function(event) {
