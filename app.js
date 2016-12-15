@@ -31,18 +31,36 @@ $(document).ready(function() {
           // console.log(data[i].address);
           var addresses = data[i].address;
           addressList.push(addresses);
-        }
+      }
 
-          // Replaced white space with + for geocode API
-          addressList = addressList.toString()
-          // console.log(addressList)
-          addressList = addressList.split(' ').join('+');
-          // console.log(addressList)
-          addressList = addressList.split();
-          console.log(addressList)
+        // Replaced white space with + for geocode API
+        addressList = addressList.toString()
+        // console.log(addressList)
+        addressList = addressList.split(' ').join('+');
+        // console.log(addressList)
+        addressList = addressList.split();
+        console.log(addressList)
+
+        // Google address coords request
+        var coords = new Promise((resolve, reject) => .)
 
 
-        // Google address request
+
+        // addressList.forEach(function(element) {
+        //   $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+addresses+"?city="+city+"?state="+state+"&key=AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk",
+        //     function() {
+        //       console.log(element);
+        //       console.log('up in here');
+        //     })
+        //   })
+      // $.ajax({
+      //   url: "https://maps.googleapis.com/maps/api/geocode/json?address="+addresses+"?city="+city+"?state="+state+"&key=AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk",
+      //   type: "GET",
+      //   success: console.log("success"),
+      //   dataType: 'json'
+      // });
+
+
 
     }) // End of Counted API request
 
