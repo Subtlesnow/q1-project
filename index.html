@@ -13,14 +13,15 @@
     <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body>
-    <header>
+  <body class="grey darken-1">
+    <header class="grey darken-3">
       <div class="row">
         <div class="col s12">
-          <h1>The Departed</h1>
+          <h1 class="yellow-text">The Departed</h1>
         </div>
       </div>
     </header>
+
     <main>
       <section>
         <div class="row container">
@@ -30,11 +31,11 @@
               <input type="text" id="city">
             </div>
             <div class="col s4">
-              <label>State</label>
+              <label class="">State</label>
               <input type="text" id="state">
             </div>
             <div class="col s4">
-              <button class="btn waves-effect waves-light" type="submit" name="searchButton">Search
+              <button class="btn waves-effect waves-light grey darken-3 yellow-text" type="submit" name="searchButton">Search
                 <i class="material-icons right">send</i>
               </button>
             </div>
@@ -49,24 +50,30 @@
           <img class="responsive-img" src="police_drive-by.jpg" alt="police">
         </div>
         <div class="col s6">
-          <p>The Departed is a webpage that allows you to search for justified police killings by city and State.
+          <p class="flow-text yellow-text">The Departed is a webpage that allows you to search for justified police killings by city and state.
              The data is actively collected for the years 2015-2016.
           </p>
         </div>
       </div>
     </section>
 
-    <section>
-        <div class="row">
-          <div class="col s12">
-            
-          </div>
+    <!-- <section class="container !important">
+        <div class="row container !important">
+          <div class="col s12 container !important">
+            <div class="container !important" id="map"></div>
+         </div>
         </div>
-    </section
-
+    </section -->
 
   </main>
-    <footer>
+
+    <footer class="page-footer grey darken-3">
+      <div class="container">
+        <div class="row">
+          <h3 class="yellow-text">The Departed</h3>
+          <h5 class="yellow-text">Steve VanWoerkom</h5>
+        </div>
+      </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>

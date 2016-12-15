@@ -3,7 +3,7 @@
 // mapboxgl.accessToken = 'pk.eyJ1Ijoic3VidGxlcmlkZXNub3ciLCJhIjoiY2l3a2F2cnVuMDAzNDJvcDI2Nnc3d3R3MiJ9.2GBe5fY1JXBCg48VcATbZw';
 // var map = new mapboxgl.Map({
 //     container: 'map', // container id
-//     style: 'mapbox://styles/subtleridesnow/ciwn3f9w400452ppll27n9i56', //hosted style id
+//     style: 'mapbox://styles/mapbox/dark-v9', //hosted style id
 //     center: [-98, 39], // starting position
 //     zoom: 3, // starting zoom
 //     "pitch": 50 //pitch
@@ -16,10 +16,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     var city = $('#city').val();
-    // clear field function
+    // console.log(city)
+    $('#city').val('');
     var state = $('#state').val();
-    // clear field function
-    console.log(city, state)
+    $('#state').val('');
+    // console.log(city, state)
 
 
       // Google city/state latitude/longitude request
@@ -48,27 +49,24 @@ $(document).ready(function() {
         // console.log(addressList)
         addressList = addressList.split(' ').join('+');
         // console.log(addressList)
-        addressList = addressList.split();
-        console.log(addressList)
+        addressList = addressList.split(',');
+        // console.log(addressList)
+
 
         // // Google address coords request
-        // var coords = new Promise((resolve, reject) => .)
+        addressList.forEach(function(addressStr) {
+          $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+addressStr+"+"+city+"+%22?state=%22+"+state+"+%22&key=AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk",
+            function(house) {
+              // console.log(house);
+              var addressLat = house.results[0].geometry.location.lat;
+              console.log(addressLat);
+              var addressLng = house.results[0].geometry.location.lng;
+              console.log(addressLng);
+            })
+        }) // End of Google address coords
 
 
 
-        // addressList.forEach(function(element) {
-        //   $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+addresses+"?city="+city+"?state="+state+"&key=AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk",
-        //     function() {
-        //       console.log(element);
-        //       console.log('up in here');
-        //     })
-        //   })
-      // $.ajax({
-      //   url: "https://maps.googleapis.com/maps/api/geocode/json?address="+addresses+"?city="+city+"?state="+state+"&key=AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk",
-      //   type: "GET",
-      //   success: console.log("success"),
-      //   dataType: 'json'
-      // });
 
 
 
