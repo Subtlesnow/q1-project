@@ -5,7 +5,6 @@
     <title>The Departed</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
@@ -21,6 +20,7 @@
     </header>
 
     <main>
+      <!-- Search Bar -->
       <section>
         <div class="row container">
           <form>
@@ -30,7 +30,7 @@
             </div>
             <div class="col s4">
               <label class="">State</label>
-              <input type="text" id="state">
+              <input type="text" id="state" placeholder="Enter state as Postal Code">
             </div>
             <div class="col s4">
               <button class="btn waves-effect waves-light grey darken-3 yellow-text" type="submit" name="searchButton">Search
@@ -41,36 +41,30 @@
         </form>
       </div>
     </section>
-
+    <!-- Picture and Description -->
     <section>
       <div class="row">
         <div class="col s6">
-          <img class="responsive-img" src="police_drive-by.jpg" alt="police">
+          <img class="responsive-img" src="police_scene.jpg" alt="police">
         </div>
         <div class="col s6">
           <p class="flow-text yellow-text">The Departed is a webpage that allows you to search for justified police killings by city and state.
-             The data is actively collected for the years 2015-2016.
+             The data is live information collected staring with the year 2015.
           </p>
         </div>
       </div>
     </section>
-
+    <!-- Dynamically Generated Address List -->
     <section>
       <div class="container">
         <div class="row">
-          <!-- <div class="col s3">
-          </div> -->
-          <div class="col s12 allData">
-
+          <div class="col s12 allData yellow-text">
           </div>
-          <!-- <div class="col s3">
-          </div> -->
         </div>
       </div>
     </section>
-
   </main>
-
+    <!-- Footer -->
     <footer class="page-footer grey darken-3">
       <div class="container">
         <div class="row">
