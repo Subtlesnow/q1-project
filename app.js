@@ -1,16 +1,5 @@
 // google geocode key AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic3VidGxlcmlkZXNub3ciLCJhIjoiY2l3a2F2cnVuMDAzNDJvcDI2Nnc3d3R3MiJ9.2GBe5fY1JXBCg48VcATbZw';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/subtleridesnow/ciwqqxdan00la2qqolgtidcmx', //hosted style id
-    center: [-98, 39], // starting position
-    zoom: 3, // starting zoom
-    "pitch": 50 //pitch
-});
-
-
-
 
 $(document).ready(function() {
 
@@ -40,10 +29,18 @@ $(document).ready(function() {
       $.get(countedAPI, function(data) {
         var addressList = [];
         for(let i = 0; i < data.length; i++) {
+          $('.allData').append('<p> Address: ' + data[i].address + ' ' + city + ' ' + state)
           console.log(data[i].address);
-          var addresses = data[i].address;
-          addressList.push(addresses);
+          // var addresses = data[i].address;
+          // addressList.push(addresses);
+
+
+          // for(let i = 0; i < addressList.length; i++) {
+          //   var address1 = $('<p>Address: ' + addressList[i] + '<p>')
+          //   $('.allData').append(address1);
+          // }
       }
+
 
         // Replaced white space with + for geocode API
         addressList = addressList.toString()
@@ -60,9 +57,20 @@ $(document).ready(function() {
             function(house) {
               // console.log(house);
               var addressLat = house.results[0].geometry.location.lat;
-              console.log(addressLat);
+              // console.log(addressLat);
               var addressLng = house.results[0].geometry.location.lng;
-              console.log(addressLng);
+              // console.log(addressLng);
+
+
+              // var city1 = $('<p>City: ' + city + '</p>')
+              // $('.allData').append(city1);
+              // var state1 = $('<p>State: ' + state + '<p>')
+              // $('.allData').append(state1);
+              // for(let i = 0; i < addressList.length; i++) {
+              //   var address1 = $('<p>Address: ' + addressList[i] + '<p>')
+              //   $('.allData').append(address1);
+              // }
+
 
           }) //End of get request
         }) // End of Google address coords
