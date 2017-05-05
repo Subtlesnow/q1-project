@@ -1,0 +1,22 @@
+{
+  "name": "the_departed",
+  "version": "1.0.0",
+  "description": "A community awareness tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subtlesnow/q1-project.git"
+  },
+  "author": "Steven VanWoerkom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subtlesnow/q1-project/issues"
+  },
+  "homepage": "https://github.com/Subtlesnow/q1-project#readme",
+  "devDependencies": {
+    "vuetify": "^0.11.1"
+  }
+}

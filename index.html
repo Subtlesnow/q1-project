@@ -14,24 +14,27 @@
     <header class="grey darken-3">
       <div class="row">
         <div class="col s12">
-          <h1 class="yellow-text"><u>The Departed</u></h1>
+          <h1 class="yellow-text">The Departed</h1>
           <h5 class="yellow-text">Community Awareness Program</h5>
         </div>
       </div>
     </header>
 
     <main>
+      <div class="picture">
+        <img class="responsive-img" src="Depart_Police.jpg" alt="police">
+      </div>
       <!-- Search Bar -->
-      <section>
+      <section class="inputs">
         <div class="row container">
           <form>
             <div class="col s4">
-              <label>City</label>
-              <input type="text" id="city">
+              <!-- <label>City</label> -->
+              <input type="text" id="city" placeholder="City">
             </div>
             <div class="col s4">
-              <label class="">State</label>
-              <input type="text" id="state" placeholder="Enter state as Postal Code">
+              <!-- <label class="">State</label> -->
+              <input type="text" id="state" placeholder="State as Postal Code">
             </div>
             <div class="col s4">
               <button class="btn waves-effect waves-light grey darken-3 yellow-text" type="submit" name="searchButton">Search
@@ -45,9 +48,7 @@
     <!-- Picture and Description -->
     <section>
       <div class="row">
-        <div class="col s6">
-          <img class="responsive-img" src="police_scene.jpg" alt="police">
-        </div>
+
         <div class="col s6">
           <p class="flow-text yellow-text">The Departed is a webpage that allows you to search for justified police killings by city and state.
              The data is live information collected staring with the year 2015.

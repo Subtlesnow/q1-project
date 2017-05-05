@@ -1,5 +1,5 @@
-// google geocode key AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk
 // Firebase URL https://q1-project-2fde6.firebaseapp.com
+// google geocode key AIzaSyB_btmf41ZGYvX0ru8FBtb9gOgVWBOp5Lk
 
 $(document).ready(function() {
 
