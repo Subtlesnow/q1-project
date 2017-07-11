@@ -3,14 +3,7 @@
 
 $(document).ready(function() {
 
-  mapboxgl.accessToken = '<your access token here>';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v9',
-    center: [-103.59179687498357, 40.66995747013945],
-    zoom: 3
-  });
-
+  
 
   $('form').on('submit', function(event) {
     event.preventDefault();
@@ -57,6 +50,13 @@ $(document).ready(function() {
               var addressLng = house.results[0].geometry.location.lng;
               console.log(addressLng);
 
+          mapboxgl.accessToken = 'pk.eyJ1Ijoic3VidGxlcmlkZXNub3ciLCJhIjoiY2l3a2F2cnVuMDAzNDJvcDI2Nnc3d3R3MiJ9.2GBe5fY1JXBCg48VcATbZw';
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/dark-v9',
+            center: [-103.59179687498357, 40.66995747013945],
+            zoom: 3
+          });
 
           }) //End of get request
 

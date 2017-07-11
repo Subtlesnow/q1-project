@@ -11,6 +11,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  margin:0;
+  padding:0;
 }
 
 main {
@@ -26,4 +28,9 @@ main {
   margin: 0 auto;
   height: auto;
   width: 80%;
+
+#map { position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
 }
